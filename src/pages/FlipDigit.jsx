@@ -21,7 +21,7 @@ const FlipDigit = ({ digit, prevDigit }) => {
 
 	return (
 		<div className="relative inline-flex flex-col rounded-[0.1em] w-full perspective-[1000px] font-['Times_New_Roman']">
-			{/* Top static part */}
+			{/* Top Card */}
 			<div
 				className="relative z-[1] bg-[#101010] rounded-t-[0.1em] border-b-[2px] border-[rgba(255,255,255,0.15)]
                       text-center overflow-hidden leading-[0.5] py-[0.25em] h-[0.1em]
@@ -30,7 +30,7 @@ const FlipDigit = ({ digit, prevDigit }) => {
 				{digit}
 			</div>
 
-			{/* Bottom static part */}
+			{/* Bottom Card */}
 			<div
 				className="relative z-[1] bg-[#101010] rounded-b-[0.1em] border-t-[2px] border-[rgba(255,255,255,0.15)]
                       flex items-end justify-center text-center overflow-hidden leading-[0.5]
@@ -41,7 +41,7 @@ const FlipDigit = ({ digit, prevDigit }) => {
 
 			{flip && (
 				<>
-					{/* Top flip (old value) */}
+					{/* Flip Top Card */}
 					<div
 						className="absolute w-full z-[2] bg-[#101010] rounded-t-[0.1em] text-center overflow-hidden
                        leading-[0.5] py-[0.25em] h-[0.1em] text-[#b7b7b7] text-[clamp(10vw,15vw,20vw)]
@@ -51,7 +51,7 @@ const FlipDigit = ({ digit, prevDigit }) => {
 						{prevDigit}
 					</div>
 
-					{/* Bottom flip (new value, bottom half only) */}
+					{/* Flip Bottom Card */}
 					<div
 						className="absolute bottom-0 w-full z-[2] overflow-hidden h-1/2 rounded-b-[0.1em] bg-[#101010]
                        animate-[flip-bottom_350ms_ease-out_350ms_forwards]
